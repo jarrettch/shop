@@ -34,8 +34,16 @@ if ('development' == app.get('env')) {
 
 
 app.get('/users', user.list);
+
 app.get('/orders', order.list);
-app.get('/products', product.list);
+// app.post('/orders/create', order.create);
+app.get('/orders/:order_id/destroy', order.list);
+
+
+app.get('/orders/products', product.list);
+// app.post('/orders/:order_id/products/create', product.create);
+app.get('/orders/:order_id/products/:product_id/destroy', product.list);
+
 
 // Sequelize
 db
