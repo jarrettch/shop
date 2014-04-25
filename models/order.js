@@ -12,13 +12,13 @@ module.exports = function(sequelize, DataTypes) {
   })
   
   Order
-  .build({ ordernumber: 1 })
-  .save()
-  .success(function() {
-    console.log("success!")
-  }).error(function(error) {
-    throw error
-  })
+    .build({ ordernumber: 1 })
+    .save()
+    .success(function() {
+      console.log("success")
+    }).error(function(error) {
+      throw error
+    })
 
   return Order
 }
