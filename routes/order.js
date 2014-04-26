@@ -4,7 +4,7 @@ var db = require('../models')
  */
 
 exports.list = function(req, res){
-  res.send( {
+  res.send({
    // orders: Order.findAll
   });
 };

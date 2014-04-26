@@ -4,7 +4,7 @@ var db = require('../models')
  */
 
 exports.index = function(req, res){
-  db.Order.findAll({
+  db.Order.all({
     include: [ db.Product ]
   }).success(function(orders) {
     res.render('index', {

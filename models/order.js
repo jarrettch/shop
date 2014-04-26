@@ -9,14 +9,14 @@ module.exports = function(sequelize, DataTypes) {
     }
   })
   
-  Order
-    .build({ ordernumber: 1 })
-    .save()
-    .success(function() {
-      console.log("success")
-    }).error(function(error) {
-      throw error
-    })
+  // Order
+  //   .build({ ordernumber: 1 })
+  //   .save()
+  //   .success(function() {
+  //     console.log("success")
+  //   }).error(function(error) {
+  //     throw error
+  //   })
 
   Order.bulkCreate([
     { ordernumber: 2 },
@@ -26,6 +26,8 @@ module.exports = function(sequelize, DataTypes) {
       Order.findAll().success(function(orders) {
         console.log(orders)
       })
+    }).error(function(error) {
+      throw error
     })  
 
   return Order
